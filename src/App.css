@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+.form_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0 80px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+    font-size: 42px;
+    color: #576574;
+    font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+    width: 80%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input {
+    width: 100%;
+    background-color: #e4e5e9;
+    color: #222f3e;
+    outline: none;
+    margin: 10px 0 10px 0;
+    padding: 10px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border: transparent;
+    border-radius: 7px;
 }
 
-.App-link {
-  color: #61dafb;
+.phone_no_input {
+    width: 100%;
+    background-color: #e4e5e9;
+    color: #222f3e;
+    outline: none;
+    margin: 10px 0 10px 0;
+    padding: 0 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border: transparent;
+    border-radius: 7px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.otp_taking_field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp_taking_field input {
+    border-radius: 7px 0 0 7px;
+}
+
+.non_otp_field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    background-color: #e4e5e9;
+    color: #222f3e;
+    outline: none;
+    margin: 10px 0 10px 0;
+    padding: 10px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border: transparent;
+    border-radius: 7px;
+}
+
+.main_button {
+    background-color: #10ac84;
+    color: #fff;
+    width: 8rem;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: transparent;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.main_button:hover {
+    background-color: #0d9372;
+    transition: 0.3s ease;
+}
+
+button[type="button"] {
+    border-radius: 0 7px 7px 0;
+}
+
+
+/* Responsive CSS */
+
+@media screen and (max-width: 550px) {
+    form {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .form_container {
+        margin: 10px 30px 80px 30px;
+    }
+    .otp_taking_field {
+        flex-direction: column;
+    }
+    .non_otp_field {
+        flex-direction: column;
+    }
+    .otp_taking_field input {
+        border-radius: 7px;
+    }
+    button[type="button"] {
+        border-radius: 7px;
+    }
 }
