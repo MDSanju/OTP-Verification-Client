@@ -135,7 +135,7 @@ function App() {
     if (otp.submitEmailOTP === submitOTP && wrongPhoneCode === false) {
       const proceed = window.confirm("Please confirm to send!");
       if (proceed) {
-        fetch("http://localhost:5000/messages", {
+        fetch("https://dry-oasis-05939.herokuapp.com/messages", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -161,7 +161,7 @@ function App() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/emailOTP/OTP")
+    fetch("https://dry-oasis-05939.herokuapp.com/emailOTP/OTP")
       .then((res) => res.json())
       .then((data) => setAllOTP(data));
   }, []);
@@ -182,7 +182,7 @@ function App() {
       setInvalidEmail(true);
       return emailNotValid();
     } else {
-      fetch("http://localhost:5000/emailOtp", {
+      fetch("https://dry-oasis-05939.herokuapp.com/emailOtp", {
         method: "POST",
         headers: {
           "content-type": "application/json",
